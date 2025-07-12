@@ -1,4 +1,3 @@
-//your JS code here. If required.
 const player1Input = document.getElementById("player1");
 const player2Input = document.getElementById("player2");
 const submitBtn = document.getElementById("submit");
@@ -27,12 +26,12 @@ cells.forEach((cell, index) => {
   cell.addEventListener("click", () => {
     if (gameOver || cell.textContent !== "") return;
 
-    const symbol = currentPlayer === player1 ? "x" : "o";
+    const symbol = currentPlayer === player1 ? "x" : "o"; // Changed to lowercase
     board[index] = symbol;
     cell.textContent = symbol;
 
     if (checkWinner(symbol)) {
-      message.textContent = `${currentPlayer}, congratulations you won!`;
+      message.textContent = `${currentPlayer} congratulations you won!`; // Changed message format
       highlightWinningCells(symbol);
       gameOver = true;
     } else if (board.every(val => val !== "")) {
