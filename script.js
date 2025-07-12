@@ -27,7 +27,7 @@ cells.forEach((cell, index) => {
   cell.addEventListener("click", () => {
     if (gameOver || cell.textContent !== "") return;
 
-    const symbol = currentPlayer === player1 ? "X" : "O";
+    const symbol = currentPlayer === player1 ? "x" : "o";
     board[index] = symbol;
     cell.textContent = symbol;
 
